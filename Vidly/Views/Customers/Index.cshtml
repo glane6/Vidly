@@ -1,0 +1,21 @@
+﻿@model Vidly.Viewmodels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Customers</h1>
+
+<table class ="table table-bordered table-hover">
+    @foreach (var x in Model.Customers)
+    {
+        <tr>
+            <td>@Html.ActionLink(@x.Name, "Edit", "Customers", new{id=x.Id}, null)</td>
+        </tr>
+    }
+
+</table>
+
+
+
+
